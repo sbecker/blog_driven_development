@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   config.gem 'authlogic'
   config.gem 'chriseppstein-compass', :lib => 'compass'
   config.gem 'cucumber'
+  config.gem 'RedCloth'
   config.gem 'rspec', :lib => false
   config.gem 'rspec-rails', :lib => false
   config.gem 'thoughtbot-factory_girl', :lib => 'factory_girl', :source => 'http://gems.github.com'

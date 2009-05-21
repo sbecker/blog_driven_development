@@ -6,11 +6,11 @@ Feature: Manage posts
   Scenario: Create a new post with valid password
     Given I am on the new post page
     When I fill in "Title" with "title 1"
-    And I fill in "Body" with "body 1"
+    And I fill in "Body" with "_body_ 1"
     And I fill in "Password" with "brian_and_scott"
     And I press "Create"
     Then I should see "title 1"
-    And I should see "body 1"
+    And I should see textilized "_body_ 1"
 
   Scenario: Fail to create a new post with invalid password
     Given I am on the new post page

@@ -1,4 +1,5 @@
 %h2
   = link_to h(post.title), post
 
-.body=h post.body
+.body
+  = textilize(post.body)

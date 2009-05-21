@@ -11,6 +11,11 @@ When /^I delete the (\d+)(?:st|nd|rd|th) post$/ do |pos|
   end
 end
 
+Then /^I should see textilized "([^\"]*)"$/ do |textile|
+  textiled = RedCloth.new(textile).to_html
+  response.body.include?(textiled).should be_true
+end
+
 Then /^I should see the following posts:$/ do |posts|
   posts.rows.each_with_index do |row, i|
     row.each_with_index do |cell, j|
