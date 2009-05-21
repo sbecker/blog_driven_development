@@ -1,5 +1,7 @@
 Given /^the following posts:$/ do |posts|
-  Post.create!(posts.hashes)
+  posts.hashes.each do |post_hash|
+    Post.create!(post_hash.merge(:password => "brian_and_scott"))
+  end
 end
 
 When /^I delete the (\d+)(?:st|nd|rd|th) post$/ do |pos|

@@ -3,13 +3,22 @@ Feature: Manage posts
   As a blogger
   I want to post my thoughts in the form of blog entries
   
-  Scenario: Create a new post
+  Scenario: Create a new post with valid password
     Given I am on the new post page
     When I fill in "Title" with "title 1"
     And I fill in "Body" with "body 1"
+    And I fill in "Password" with "brian_and_scott"
     And I press "Create"
     Then I should see "title 1"
     And I should see "body 1"
+
+  Scenario: Fail to create a new post with invalid password
+    Given I am on the new post page
+    When I fill in "Title" with "title 1"
+    And I fill in "Body" with "body 1"
+    And I fill in "Password" with "franks_and_beans"
+    And I press "Create"
+    Then I should see "Password is invalid"
 
   Scenario: Delete post
     Given the following posts:
