@@ -1,4 +1,6 @@
 authlogic
+haml-edge
+echoe
 chriseppstein-compass --source http://gems.github.com
 cucumber
 RedCloth
