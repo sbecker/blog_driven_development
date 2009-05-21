@@ -1,12 +1,5 @@
-%table
-  %tr
-    %th Title
-    %th Body
-  - @posts.each do |post|
-    %tr
-      %td
-        = post.title
-      %td
-        = post.body
-      %td
-        = #link_to "Destroy", post_path(post), :method => :delete
+%ul#posts
+  - for post in @posts
+    %li.post
+      .content
+        = render :partial => "post", :object => post

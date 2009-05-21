@@ -14,9 +14,15 @@ end
 Then /^I should see the following posts:$/ do |posts|
   posts.rows.each_with_index do |row, i|
     row.each_with_index do |cell, j|
-      response.should have_selector("table > tr:nth-child(#{i+2}) > td:nth-child(#{j+1})") { |td|
-        td.inner_text.should contain(cell)
-      }
+      if j == 0
+        response.should have_selector("ul[id=posts] > li:nth-child(#{i+1}) a") do |a|
+          a.inner_text.should contain(cell)
+        end
+      else
+        response.should have_selector("ul[id=posts] > li:nth-child(#{i+1}) div[class=body]") do |div|
+          div.inner_text.should contain(cell)
+        end
+      end
     end
   end
 end
