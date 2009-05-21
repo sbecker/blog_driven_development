@@ -4,7 +4,8 @@ describe Post do
   before(:each) do
     @valid_attributes = {
       :title => "value for title",
-      :body => "value for body"
+      :body => "value for body",
+      :password => "brian_and_scott"
     }
   end
 
