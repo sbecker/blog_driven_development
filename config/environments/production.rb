@@ -27,4 +27,6 @@ config.action_view.cache_template_loading            = true
 # Enable threaded mode
 # config.threadsafe!
 
-Sass::Plugin.options[:never_update] = true
+config.after_initialize do
+  Sass::Plugin.options[:never_update] = true
+end
