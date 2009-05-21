@@ -1,0 +1,9 @@
+authlogic
+chriseppstein-compass --source http://gems.github.com
+cucumber
+RedCloth
+rspec
+rspec-rails
+thoughtbot-factory_girl --source http://gems.github.com
+thoughtbot-shoulda --source http://gems.github.com
+webrat
