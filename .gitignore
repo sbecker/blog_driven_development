@@ -1,0 +1,11 @@
+.rake-completion
+.DS_Store
+config/database.yml
+coverage
+db/*.sqlite3
+*.tmproj
+log/*.log
+tmp/*
+tmp/**/*
+tmp/restart.txt
+public/system
