@@ -12,7 +12,8 @@ module NavigationHelpers
       '/'
     when /the new post page/
       new_post_path
-
+    when /the posts index page/
+      posts_path
     
     # Add more mappings here.
     # Here is a more fancy example:

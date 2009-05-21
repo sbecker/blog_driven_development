@@ -20,16 +20,17 @@ Feature: Manage posts
     And I press "Create"
     Then I should see "Password is invalid"
 
-  Scenario: Delete post
+  Scenario: Listing posts should show up newest first
     Given the following posts:
       |title|body|
       |title 1|body 1|
       |title 2|body 2|
       |title 3|body 3|
       |title 4|body 4|
-    When I delete the 3rd post
+    When I am on the posts index page
     Then I should see the following posts:
       |title|body|
-      |title 1|body 1|
-      |title 2|body 2|
       |title 4|body 4|
+      |title 3|body 3|
+      |title 2|body 2|
+      |title 1|body 1|
