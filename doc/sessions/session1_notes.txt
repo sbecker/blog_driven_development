@@ -1,0 +1,56 @@
+The Goals: 
+ - Build a blog, using rails and current best-practices
+ - Dogfood all the way - posts for blog will be on the blog we build
+ - Learn how to use cucumber to drive development
+ - Get better at pair programming
+ - Practice full integration of Story Driven Development
+
+ - Tools we plan to use:
+   - Cucumber stories
+   - Rspec + Shoulda?
+   - Factorygirl or Machinist (perhaps that should be a post)
+   - Compass (+ haml & sass)
+   - Github - open source
+   - Integrity? (continuous integration)
+   - Heroku? too much at once - maybe later? Maybe that will be a side experiment at some point - i agree
+
+For tonight:
+ - 1st post, probably talk about goals. 
+ - Start building the first feature - which is:
+   - should be able to go to the website and read the first post
+ - Must beto be able to make 1 post
+ - It should be editable by us, and only us.
+ - It must be deployed - where, I have a slice I'm not really using atm. ok, domain?  did you you buy Blogdriven
+ - anything else?
+ 
+ So, step 1: **DONE**
+ then generate rails project from a template - what template? 
+  B- I thought it would be a good chance to try writing one.
+  B -Something super simple.  Like, include  authlogic, and sass. - thought: compass... (css framework, might use sass?? )
+  S- I kinda think writing a rails template is something you do to extract out your process after you've done something the same way a few times, whereas
+  S- we're kind of exploring at the moment. 
+  B- That's fine, I was just thinking it would be fun to exercise the new rails features
+  S- Here's what we can do - ad-hoc generate, then make it into a template and regenerate.
+  B- Sweet, can you generate from a current project?
+  B- or is it do you just mean writing it based on the project.  Gotcha
+  S- or, if you feel comfortable, go for it
+  
+
+  Step 2: Write todays scenarios in cucumber?
+  - generate rspec and cucumber stuff - done
+  - 
+
+RSpec the shit
+red green it
+repeat until we have a postable app
+then deploy?
+then write post - sounds good, this can be the scratchpad for the post, we can compile it later...
+ sounds good to me.
+ 
+
+Things we learned:
+ - rails templates
+   - gems get added to environment.rb in reverse of the order they're declared in the template
+   - rspec and rspec-rails need to have :lib => false in the config.gem options, because they are already required in the rspec rake file
+
+
