@@ -1,3 +1,7 @@
+Session 1: Wedesnday, May 20th, 2009
+
+(Partial notes, Brian has more on his machine)
+
 The Goals: 
  - Build a blog, using rails and current best-practices
  - Dogfood all the way - posts for blog will be on the blog we build
@@ -52,5 +56,15 @@ Things we learned:
  - rails templates
    - gems get added to environment.rb in reverse of the order they're declared in the template
    - rspec and rspec-rails need to have :lib => false in the config.gem options, because they are already required in the rspec rake file
+ - more, but I stopped taking notes
 
-
+What we did:
+ - Built a rails template
+ - Setup cucumber
+ - Created some initial stories for listing, creating and deleting posts
+ - Made them work
+ - Used HAML & Sass for the views, and Compass for the css layout
+ - Added a basic hard-coded password, to be used to protect the site from allowing anyone to post
+ - Removed delete functionality for now, so we could go-live with something
+ - Attempted to deploy to a Slicehost instance, got a weird error, configuration issue
+ - Ended up deploying it to heroku the next day
